@@ -188,7 +188,7 @@ private:
   void _find_and_remove_invalidated_thread_contexts();
 
 private:
-  Config const& _config; /**< reference to config */
+  [[maybe_unused]] Config const& _config; /**< reference to config */
 
   Spinlock _spinlock; /**< Protect access when register contexts or removing contexts */
   std::vector<std::shared_ptr<ThreadContext>> _thread_contexts; /**< The registered contexts */
@@ -211,7 +211,7 @@ private:
    * Incremented by any thread on thread local destruction, decremented by the backend thread
    */
   alignas(CACHELINE_SIZE) std::atomic<uint8_t> _invalid_thread_context{0};
-  char _pad0[detail::CACHELINE_SIZE - sizeof(std::atomic<uint8_t>)] = "\0";
+  [[maybe_unused]] char _pad0[detail::CACHELINE_SIZE - sizeof(std::atomic<uint8_t>)] = "\0";
 };
 } // namespace detail
 } // namespace quill
