@@ -64,7 +64,7 @@ public:
 
 private:
   std::string _backend_thread_name{"Quill_Backend"}; /** Custom name for the backend thread */
-  std::chrono::nanoseconds _backend_thread_sleep_duration{300};
+  std::chrono::nanoseconds _backend_thread_sleep_duration{100000000};
   size_t _backend_thread_max_transit_events{800};
   uint16_t _backend_thread_cpu_affinity{
     (std::numeric_limits<uint16_t>::max)()}; /** max() as undefined value, cpu affinity will not be set */
