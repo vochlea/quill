@@ -126,7 +126,7 @@ public:
       _producer = next_node;
 
       // add the item again, this time we know we will always succeed, cast to void* to ignore
-      QUILL_MAYBE_UNUSED bool const emplaced_ =
+      [[maybe_unused]] bool const emplaced_ =
         _producer->bounded_spsc_queue.template try_emplace<TInsertedObject>(std::forward<Args>(args)...);
     }
   }
