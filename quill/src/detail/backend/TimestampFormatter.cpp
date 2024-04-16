@@ -9,6 +9,11 @@
 #include <ctime>                      // for size_t, strftime, time_t
 #include <utility>                    // for addressof
 
+#ifdef MF_PROTECTION_BUILD
+#include "cpExtensions.h"
+CP_NOINSTRUMENT_FILE
+#endif /* MF_PROTECTION_BULD */
+
 namespace
 {
 // Contains the additional specifier name, at the same index as the enum
