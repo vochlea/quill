@@ -1,3 +1,8 @@
+#ifdef MF_PROTECTION_BUILD
+#include "cpExtensions.h"
+CP_NOINSTRUMENT_FILE
+#endif /* MF_PROTECTION_BUILD */
+
 /**
  * Adding a benchmark for a another logger should be straight forward by duplicating and modifying
  * this file.

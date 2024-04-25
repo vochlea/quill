@@ -1,3 +1,8 @@
+#ifdef MF_PROTECTION_BUILD
+#include "cpExtensions.h"
+CP_NOINSTRUMENT_FILE
+#endif /* MF_PROTECTION_BUILD */
+
 #include "quill/detail/ThreadContextCollection.h"
 #include "quill/detail/ThreadContext.h" // for ThreadContext, ThreadContext...
 #include "quill/detail/misc/Macros.h"   // for QUILL_UNLIKELY

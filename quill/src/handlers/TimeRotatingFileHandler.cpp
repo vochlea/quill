@@ -1,3 +1,8 @@
+#ifdef MF_PROTECTION_BUILD
+#include "cpExtensions.h"
+CP_NOINSTRUMENT_FILE
+#endif /* MF_PROTECTION_BUILD */
+
 #include "quill/handlers/TimeRotatingFileHandler.h"
 #include "quill/QuillError.h"                // for QuillError, QUILL_THROW
 #include "quill/detail/misc/Common.h"        // for filename_t

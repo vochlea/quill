@@ -1,3 +1,8 @@
+#ifdef MF_PROTECTION_BUILD
+#include "cpExtensions.h"
+CP_NOINSTRUMENT_FILE
+#endif /* MF_PROTECTION_BUILD */
+
 #include "quill/detail/serialize/Deserialize.h"
 #include "quill/QuillError.h"
 #include "quill/detail/misc/Attributes.h"

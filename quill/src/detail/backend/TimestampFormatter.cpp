@@ -1,3 +1,8 @@
+#ifdef MF_PROTECTION_BUILD
+#include "cpExtensions.h"
+CP_NOINSTRUMENT_FILE
+#endif /* MF_PROTECTION_BUILD */
+
 #include "quill/detail/backend/TimestampFormatter.h"
 #include "quill/Fmt.h"                // for buffer
 #include "quill/QuillError.h"         // for QUILL_THROW, QuillError

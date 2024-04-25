@@ -1,3 +1,8 @@
+#ifdef MF_PROTECTION_BUILD
+#include "cpExtensions.h"
+CP_NOINSTRUMENT_FILE
+#endif /* MF_PROTECTION_BUILD */
+
 #include "quill/handlers/FileHandler.h"
 #include "quill/detail/misc/FileUtilities.h" // for append_date_to_filename
 #include <cstdio>                            // for fclose

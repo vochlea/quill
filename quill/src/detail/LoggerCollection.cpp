@@ -1,3 +1,8 @@
+#ifdef MF_PROTECTION_BUILD
+#include "cpExtensions.h"
+CP_NOINSTRUMENT_FILE
+#endif /* MF_PROTECTION_BUILD */
+
 #include "quill/detail/LoggerCollection.h"
 #include "quill/QuillError.h"               // for QUILL_THROW, QuillError
 #include "quill/detail/HandlerCollection.h" // for HandlerCollection

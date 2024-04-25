@@ -1,3 +1,8 @@
+#ifdef MF_PROTECTION_BUILD
+#include "cpExtensions.h"
+CP_NOINSTRUMENT_FILE
+#endif /* MF_PROTECTION_BUILD */
+
 #include "quill/detail/misc/Utilities.h"
 
 #include "quill/detail/misc/Os.h" // for localtime_rs, ..

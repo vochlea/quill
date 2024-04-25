@@ -1,3 +1,8 @@
+#ifdef MF_PROTECTION_BUILD
+#include "cpExtensions.h"
+CP_NOINSTRUMENT_FILE
+#endif /* MF_PROTECTION_BUILD */
+
 #include "quill/detail/backend/BackendWorker.h"
 #include "quill/detail/misc/FileUtilities.h"
 #include <iostream> // for endl, basic_ostream, cerr, ostream
