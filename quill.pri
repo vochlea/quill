@@ -1,6 +1,6 @@
 
 macx:{
-    QMAKE_CXXFLAGS_WARN_ON += -Wno-unused-private-field
+    QMAKE_CXXFLAGS_WARN_ON += -Wno-unused-private-field -Wno-deprecated-literal-operator
 }
 
 INCLUDEPATH += $$PWD/quill/include
