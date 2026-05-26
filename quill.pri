@@ -1,6 +1,8 @@
 
 macx:{
-    QMAKE_CXXFLAGS_WARN_ON += -Wno-unused-private-field -Wno-deprecated-literal-operator
+    # -Wunknown-warning-option first so older CI Clangs that don't know
+    # -Wdeprecated-literal-operator don't error under -Werror.
+    QMAKE_CXXFLAGS_WARN_ON += -Wno-unknown-warning-option -Wno-unused-private-field -Wno-deprecated-literal-operator
 }
 
 INCLUDEPATH += $$PWD/quill/include
